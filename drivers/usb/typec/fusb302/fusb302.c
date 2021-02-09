@@ -3409,7 +3409,7 @@ static int fusb30x_probe(struct i2c_client *client,
 					chip->gpio_int_irq,
 					NULL,
 					cc_interrupt_handler,
-					IRQF_ONESHOT | IRQF_TRIGGER_FALLING,
+					IRQF_ONESHOT | IRQF_TRIGGER_LOW,
 					client->name,
 					chip);
 	if (ret) {
